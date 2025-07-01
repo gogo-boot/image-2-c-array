@@ -56,6 +56,55 @@ python image_converter.py /path/to/source/images /path/to/output/headers
 python image_converter.py images/ output/ --verbose
 ```
 
+## Example Scripts
+
+The project includes helpful example scripts to get you started:
+
+### `create_test_images.py`
+Creates sample test images for demonstration purposes.
+
+```bash
+python create_test_images.py
+```
+
+This script generates:
+- `example/icons/test_icon.png` - A 32x32 blue square icon
+- `example/logos/company_logo.png` - A 64x32 red logo with text
+- `example/backgrounds/gradient.png` - A 128x64 gradient background
+- `example/pattern.png` - A 16x16 checkerboard pattern
+
+After running this script, you can test the converter with:
+```bash
+python image_converter.py example/ output/
+```
+
+### `examples.py`
+Shows usage examples and ESP32 integration code.
+
+```bash
+python examples.py
+# or
+python examples.py --help
+```
+
+This script displays:
+- Command-line usage examples
+- ESP32 integration code samples
+- RGB565 format explanation
+- How to use the generated C headers in your projects
+
+### Quick Start
+```bash
+# 1. Create test images
+python create_test_images.py
+
+# 2. Convert them to C arrays
+python image_converter.py example/ output/
+
+# 3. Check the results
+ls -la output/
+```
+
 ## Output Format
 
 For each image file, the converter generates a C header file with:
